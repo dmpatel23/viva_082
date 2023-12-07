@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:src="@drawable/guni_pink_logo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/guni"/>
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="380dp"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toBottomOf="@id/guni"
+        app:layout_constraintStart_toStartOf="parent"
+        app:cardElevation="20dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="15dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nametxt"
+                android:text="Enter the Name:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/nameedit"
+                android:ems="10"
+                app:layout_constraintStart_toEndOf="@id/nametxt"
+                app:layout_constraintBaseline_toBaselineOf="@id/nametxt"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ennotxt"
+                android:text="Enter the No:"
+                app:layout_constraintStart_toStartOf="@id/nametxt"
+                app:layout_constraintTop_toBottomOf="@id/nametxt"
+                android:layout_marginTop="20dp"/>
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ennoedit"
+                android:ems="10"
+                app:layout_constraintStart_toStartOf="@id/nameedit"
+                app:layout_constraintBaseline_toBaselineOf="@id/ennotxt"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/branchtxt"
+                android:text="Enter the Branch:"
+                app:layout_constraintStart_toStartOf="@id/ennotxt"
+                app:layout_constraintTop_toBottomOf="@id/ennotxt"
+                android:layout_marginTop="20dp"
+                />
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/branchedit"
+                android:ems="10"
+                app:layout_constraintStart_toStartOf="@id/ennoedit"
+                app:layout_constraintBaseline_toBaselineOf="@id/branchtxt"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/registerbtn"
+                android:text="Register"
+                app:layout_constraintStart_toStartOf="@id/branchedit"
+                app:layout_constraintTop_toBottomOf="@id/branchedit"
+                android:layout_marginTop="20dp"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
